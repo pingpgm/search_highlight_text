@@ -64,7 +64,7 @@ class SearchTextInheritedWidget extends InheritedWidget {
     if (_searchRegExp != null) {
       return _searchRegExp!;
     }
-    return RegExp(_searchText!, caseSensitive: false);
+    return RegExp(RegExp.escape(_searchText!), caseSensitive: false);
   }
 
   @override
